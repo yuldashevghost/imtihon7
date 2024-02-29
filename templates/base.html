@@ -49,13 +49,13 @@ https://templatemo.com/tm-577-liberty-market
                         <li><a href="{% url 'liberity:home' %}">Home</a></li>
                         <li><a href="{% url 'liberity:explore' %}">Explore</a></li>
                         {% if request.user.is_authenticated %}
-                        
-                        <li><a href="{% url 'liberity:details' %}">Item Details</a></li>
+
+{#                        <li><a href="{% url 'liberity:details' item_id %}">Item Details</a></li>#}
                         <li><a href="{% url 'liberity:author' %}" >Author</a></li>
                         <li><a href="{% url 'liberity:create' %}">Create Yours</a></li>
                         <li><a href="{% url 'logout' %}" class="active">Logout</a></li>
                         {% else %}
-                            
+
                         <li><a href="{% url 'login-page' %}" class="active">Login</a></li>
                         {% endif %}
                     </ul>

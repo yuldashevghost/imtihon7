@@ -7,7 +7,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
+from django.views.generic import ListView
+
 from .forms import LoginForm, UserRegistrationForm
+
 
 
 
@@ -51,3 +54,4 @@ def register_view(request):
             return render(request, "users/register.html", {"form": form})
     else:
         return render(request, "users/register.html", {"form": form})
+

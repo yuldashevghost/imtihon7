@@ -19,3 +19,4 @@ class User(AbstractUser, AbstractModel):
     # @property
     # def post_count(self):
     #     return self.posts.count()
+

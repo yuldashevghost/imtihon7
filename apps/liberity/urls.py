@@ -1,11 +1,11 @@
 from django.urls import path
-from .views import home_page, explore, details, create, author
+from .views import item_list, explore, CreateItemView, item_detail, author
 
 app_name = 'liberity'
 urlpatterns = [
-    path('', home_page, name='home'),
+    path('', item_list, name='home'),
     path('explore/', explore, name='explore'),
-    path('details/', details, name='details'),
-    path('create/', create, name='create'),
+    path('details/<int:pk>/', item_detail, name='details'),
+    path('create/', CreateItemView.as_view(), name='create'),
     path('author/', author, name='author'),
 ]
